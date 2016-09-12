@@ -26,6 +26,7 @@ parts:
     plugin: nil
     stage-packages:
       - libgl1-mesa-dri
+      - libpulse0
       - wget
 
       # Install needed deps
