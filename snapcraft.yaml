@@ -1,0 +1,40 @@
+name: minecraft-nsg
+version: 1
+summary: Minecraft Launcher downloader
+description: |
+    This snap will download Oracle Java and Minecraft Launcher to
+    your computer. The applications are NOT distributed in this
+    snap.
+confinement: strict
+grade: devel
+
+apps:
+  minecraft-nsg:
+    command: launch
+    plugs:
+      - x11
+      - network
+      - unity7
+      - opengl
+      - pulseaudio
+
+parts:
+  launcher:
+    plugin: dump
+    source: scripts
+  game:
+    plugin: nil
+    stage-packages:
+      - libgl1-mesa-dri
+      - wget
+
+      # Install needed deps
+      - libxext6
+      - libxrender1
+      - libxtst6
+      - libxi6
+      - libswt-gtk-3-java
+      - libwebkit2gtk-3.0-25
+
+      # lwjgl uses the COMMAND xrandr !?!?
+      - x11-xserver-utils

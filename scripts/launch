@@ -1,0 +1,12 @@
+#!/bin/bash
+
+set -e
+
+export LIBGL_DRIVERS_PATH=$SNAP/usr/lib/x86_64-linux-gnu/dri
+
+$SNAP/download
+
+export JAVA_HOME=$SNAP_USER_DATA/jdk1.8.0_101/
+$JAVA_HOME/bin/java \
+	-Duser.home=$HOME/appdata \
+	-jar $SNAP_USER_DATA/Minecraft.jar

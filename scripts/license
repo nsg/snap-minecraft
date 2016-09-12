@@ -1,0 +1,14 @@
+#!/bin/bash
+
+echo "Do you agree to the license at:"
+echo "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+echo "If you agree, Oracle JDK will be downloaded and unpacked to your computer."
+echo
+echo "Type Y and enter to accept the license"
+read a
+
+if [[ $a == y ]] || [[ $a == Y ]]; then
+	exit 0
+else
+	exit 1
+fi
