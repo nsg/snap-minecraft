@@ -5,7 +5,7 @@ description: |
     This snap will download Oracle Java and Minecraft Launcher to
     your computer. The applications are NOT distributed in this
     snap.
-grade: devel
+grade: stable
 confinement: strict
 
 apps:
