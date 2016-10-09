@@ -1,0 +1,11 @@
+[Desktop Entry]
+Encoding=UTF-8
+Name=Minecraft
+GenericName=Minecraft Launcher
+Comment=The Minecraft Launcher packaged inside a snap
+Exec=${SNAP}/launch
+Icon=${SNAP}/setup/gui/minecraft-nsg.png
+Terminal=false
+Type=Application
+StartupNotify=false
+Categories=Application;Game

@@ -11,6 +11,11 @@ cd $SNAP_USER_DATA
 if [ ! -e jdk1.8.0_101 ]; then
 	$SNAP/license
 	log "Download Oracle JDK to $SNAP_USER_DATA"
+	yad \
+		--title="Download Oracle JDK" \
+		--button=gtk-ok \
+		-timeout=10 \
+		--text="Oracle JDK is downloaded in the background. It's about 170-180M in size." &
 	wget --no-cookies --no-check-certificate --header "Cookie: gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie" http://download.oracle.com/otn-pub/java/jdk/8u101-b13/jdk-8u101-linux-x64.tar.gz
 	echo "a7ab8014716b0dac3adcaf5342167699  $SNAP_USER_DATA/jdk-8u101-linux-x64.tar.gz" | md5sum -c -
 	tar xf jdk-8u101-linux-x64.tar.gz
@@ -21,6 +26,11 @@ fi
 
 if [ ! -e Minecraft.jar ]; then
 	log "Download Minecraft Launcher to $SNAP_USER_DATA"
+	yad \
+		--title="Download Minecraft Launcher" \
+		--button=gtk-ok \
+		-timeout=5 \
+		--text="Mojang Minecraft Launcher is downloaded in the background." &
 	wget -c http://s3.amazonaws.com/Minecraft.Download/launcher/Minecraft.jar
 else
 	log "Minecraft already downloaded to $SNAP_USER_DATA"

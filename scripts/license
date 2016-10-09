@@ -1,14 +1,20 @@
 #!/bin/bash
 
-echo "Do you agree to the license at:"
-echo "http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
-echo "If you agree, Oracle JDK will be downloaded and unpacked to your computer."
-echo
-echo "Type Y and enter to accept the license"
-read a
+yad \
+	--title="Accept License" \
+	--text="Do you agree to the license at:
+http://www.oracle.com/technetwork/java/javase/terms/license/index.html
 
-if [[ $a == y ]] || [[ $a == Y ]]; then
+If you agree, Oracle JDK will be downloaded from oracle[1] and unpacked to your computer.
+
+[1]: http://www.oracle.com/technetwork/java/javase/downloads/jdk8-downloads-2133151.html"
+
+if [ $? == 0 ]; then
 	exit 0
 else
+	yad \
+		--title="Setup aborted" \
+		--button=gtk-ok \
+		--text="Setup was aborted, you need to accept the \nOracle Binary Code License to use Java to run Minecraft."
 	exit 1
 fi

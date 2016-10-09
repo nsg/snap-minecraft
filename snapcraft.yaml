@@ -5,12 +5,12 @@ description: |
     This snap will download Oracle Java and Minecraft Launcher to
     your computer. The applications are NOT distributed in this
     snap.
-confinement: strict
 grade: devel
+confinement: strict
 
 apps:
   minecraft-nsg:
-    command: launch
+    command: desktop-launch $SNAP/launch
     plugs:
       - x11
       - network
@@ -22,11 +22,16 @@ parts:
   launcher:
     plugin: dump
     source: scripts
+    after: [desktop-gtk2]
+  desktop-gtk2:
+    stage:
+     - -usr/sbin/update-icon-caches
   game:
     plugin: nil
     stage-packages:
       - libgl1-mesa-dri
       - libpulse0
+      - yad
       - wget
 
       # Install needed deps
