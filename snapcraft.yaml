@@ -1,7 +1,7 @@
 ---
 
 name: minecraft-nsg
-version: 1
+version: git
 summary: Minecraft Launcher downloader
 description: |
     This snap will download Oracle Java and Minecraft Launcher to
@@ -24,8 +24,8 @@ parts:
   launcher:
     plugin: dump
     source: scripts
-    after: [desktop-gtk2]
-  desktop-gtk2:
+    after: [desktop-gtk3]
+  desktop-gtk3:
     stage:
       - -usr/sbin/update-icon-caches
   game:
@@ -46,3 +46,9 @@ parts:
 
       # lwjgl uses the COMMAND xrandr !?!?
       - x11-xserver-utils
+
+      # For the downloader
+      - python3-gi
+      - python3-gi-cairo
+      - python3-cairo
+      - gir1.2-gtk-3.0
