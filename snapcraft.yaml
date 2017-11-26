@@ -27,7 +27,7 @@ parts:
     after: [desktop-gtk2]
   desktop-gtk2:
     stage:
-     - -usr/sbin/update-icon-caches
+      - -usr/sbin/update-icon-caches
   game:
     plugin: nil
     stage-packages:
