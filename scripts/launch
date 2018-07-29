@@ -8,7 +8,7 @@ set -e
 	cd $SNAP_USER_DATA
 	if [ ! -e $JAVA_HOME ]; then
 		$SNAP/download-java.py
-		tar xf jdk-*-linux-x64.tar.gz
+		tar xf jdk-*linux*.tar.gz
 		rm jdk-*linux*.tar.gz
 	fi
 	$SNAP/download-launcher.py
