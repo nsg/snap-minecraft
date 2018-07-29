@@ -19,6 +19,7 @@ apps:
       - unity7
       - opengl
       - pulseaudio
+      - wayland
 
 parts:
   launcher:
