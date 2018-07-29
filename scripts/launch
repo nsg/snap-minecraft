@@ -2,6 +2,7 @@
 
 export LIBGL_DRIVERS_PATH=$SNAP/usr/lib/x86_64-linux-gnu/dri
 export JAVA_HOME=$SNAP/usr/lib/jvm/java-8-openjdk-amd64/
+export PATH="$JAVA_HOME/bin/:$PATH"
 
 # Clean up old Oracle java
 rm -rf $SNAP_USER_DATA/jdk*
