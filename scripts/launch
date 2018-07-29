@@ -1,6 +1,7 @@
 #!/bin/bash
 
 export LIBGL_DRIVERS_PATH=$SNAP/usr/lib/x86_64-linux-gnu/dri
+export JAVA_HOME=$SNAP/usr/lib/jvm/java-8-openjdk-amd64/
 
 set -e
 (
