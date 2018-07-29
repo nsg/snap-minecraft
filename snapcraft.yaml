@@ -30,6 +30,10 @@ parts:
       - -usr/sbin/update-icon-caches
   game:
     plugin: nil
+    build-packages:
+      - ca-certificates
+      - ca-certificates-java
+      - openjdk-8-jre-headless
     stage-packages:
       - libgl1-mesa-dri
       - libpulse0
@@ -57,4 +61,3 @@ parts:
       # I will give openjdk a try! If this works it's
       # nicer because I can distribute it with the snap.
       - openjdk-8-jre-headless
-      - ca-certificates-java
