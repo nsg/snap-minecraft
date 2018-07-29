@@ -57,3 +57,4 @@ parts:
       # I will give openjdk a try! If this works it's
       # nicer because I can distribute it with the snap.
       - openjdk-8-jre-headless
+      - ca-certificates-java
