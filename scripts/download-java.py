@@ -9,10 +9,10 @@ import hashlib
 import os.path
 import subprocess
 
-DOWNLOAD_LINK = "http://download.oracle.com/otn-pub/java/jdk/8u151-b12/e758a0de34e24606bca991d704f6dcbf/jdk-8u151-linux-x64.tar.gz"
+DOWNLOAD_LINK = "http://download.oracle.com/otn-pub/java/jdk/10.0.2+13/19aef61b38124481863b1413dce1855f/jdk-10.0.2_linux-x64_bin.tar.gz"
 DOWNLOAD_COOKIE = "gpw_e24=http%3A%2F%2Fwww.oracle.com%2F; oraclelicense=accept-securebackup-cookie"
-DOWNLOAD_SHA256 = "c78200ce409367b296ec39be4427f020e2c585470c4eed01021feada576f027f"
-DOWNLOAD_FILE = "jdk-8u151-linux-x64.tar.gz"
+DOWNLOAD_SHA256 = "6633c20d53c50c20835364d0f3e172e0cbbce78fff81867488f22a6298fa372b"
+DOWNLOAD_FILE = "jdk-10.0.2_linux-x64_bin.tar.gz"
 
 class SnapUIWindow(Gtk.Window):
 
