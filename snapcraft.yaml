@@ -7,7 +7,7 @@ grade: stable
 confinement: strict
 
 apps:
-  minecraft-nsg:
+  mc-installer:
     command: desktop-launch $SNAP/launch
     plugs:
       - x11
@@ -16,6 +16,8 @@ apps:
       - opengl
       - pulseaudio
       - wayland
+      - desktop
+      - desktop-legacy
 
 parts:
   launcher:
@@ -36,25 +38,15 @@ parts:
       - libpulse0
       - yad
       - wget
-
-      # Install needed deps
       - libxext6
       - libxrender1
       - libxtst6
       - libxi6
       - libswt-gtk-3-java
       - libwebkit2gtk-3.0-25
-
-      # lwjgl uses the COMMAND xrandr !?!?
       - x11-xserver-utils
-
-      # For the downloader
       - python3-gi
       - python3-gi-cairo
       - python3-cairo
       - gir1.2-gtk-3.0
-
-      # The launcher do not work with modern java, so
-      # I will give openjdk a try! If this works it's
-      # nicer because I can distribute it with the snap.
       - openjdk-8-jre-headless
