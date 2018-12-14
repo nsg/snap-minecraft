@@ -8,7 +8,7 @@ confinement: strict
 
 apps:
   mc-installer:
-    command: desktop-launch $SNAP/launch
+    command: desktop-launch $SNAP/minecraft-nsg.desktop
     plugs:
       - x11
       - network
