@@ -1,5 +1,3 @@
----
-
 name: mc-installer
 version: git
 summary: Minecraft Launcher downloader
