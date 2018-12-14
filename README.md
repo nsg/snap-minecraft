@@ -1,5 +1,6 @@
 # Snap Minecraft
 
-[![Snap Status](https://build.snapcraft.io/badge/nsg/snap-minecraft.svg)](https://build.snapcraft.io/user/nsg/snap-minecraft)
+[![Snap Status](https://build.snapcraft.io/badge/kz6fittycent/snap-minecraft.svg)](https://build.snapcraft.io/user/kz6fittycent/mc-installer)
 
-This is the source of the snap `minecraft-nsg` in the store.
+# Installation
+`sudo snap install mc-installer --edge`
