@@ -9,7 +9,7 @@ confinement: strict
 apps:
   mc-installer:
     command: desktop-launch $SNAP/launch
-    desktop: $SNAP/download-launcher.py
+    #desktop: $SNAP/download-launcher.py
     plugs:
       - x11
       - network
