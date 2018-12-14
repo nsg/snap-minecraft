@@ -18,6 +18,7 @@ apps:
       - wayland
       - desktop
       - desktop-legacy
+      - browser-support
 
 parts:
   launcher:
