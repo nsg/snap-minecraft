@@ -1,12 +1,10 @@
 ---
 
-name: minecraft-nsg
+name: mc-installer
 version: git
 summary: Minecraft Launcher downloader
 description: |
-    This snap will download Oracle Java and Minecraft Launcher to
-    your computer. The applications are NOT distributed in this
-    snap.
+    A port of the Minecraft-NSG installer snap. Omits the Oracle version of Java and just runs with openjdk. 
 grade: stable
 confinement: strict
 
