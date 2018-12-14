@@ -40,12 +40,10 @@ class SnapUIWindow(Gtk.Window):
 
         button1 = Gtk.LinkButton("https://minecraft.net/en-us/download/", "Read more about Minecraft")
         vbox.pack_start(button1, False, True, 0)
-        button2 = Gtk.LinkButton("https://github.com/nsg/snap-minecraft", "Submit an issue or PR")
-        vbox.pack_start(button2, False, True, 0)
 
         button = Gtk.Button.new_with_mnemonic("Download Minecraft Launcher")
         button.connect("clicked", self.on_clicked)
-        vbox.pack_start(button, False, True, 40)
+        vbox.pack_start(button, True, True, 40)
 
         self.progressbar = Gtk.ProgressBar()
         vbox.pack_start(self.progressbar, True, True, 20)
