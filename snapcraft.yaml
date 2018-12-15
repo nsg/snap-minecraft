@@ -51,4 +51,3 @@ parts:
       - python3-cairo
       - gir1.2-gtk-3.0
       - openjdk-8-jre-headless
-      - libcanberra-gtk-module
