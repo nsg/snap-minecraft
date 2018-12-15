@@ -2,9 +2,9 @@
 Encoding=UTF-8
 Name=Minecraft
 GenericName=Minecraft Launcher
-Comment=The Minecraft Launcher packaged inside a snap
+Comment=Installs Minecraft and launches it automatically
 Exec=mc-installer
-Icon=${SNAP}/meta/gui/minecraft-nsg.png
+Icon=${SNAP}/meta/gui/mc-installer.png
 Terminal=false
 Type=Application
 StartupNotify=false
