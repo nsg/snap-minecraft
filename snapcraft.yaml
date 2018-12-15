@@ -19,6 +19,7 @@ apps:
       - desktop
       - desktop-legacy
       - browser-support
+      - home
 
 parts:
   launcher:
