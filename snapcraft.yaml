@@ -1,5 +1,5 @@
 name: mc-installer
-version: 1.2.1
+version: 1.2.2
 summary: Minecraft Downloader and Installer
 description: |
     A port of the Minecraft-NSG installer snap. Omits the Oracle version of Java and just runs with openjdk. Skips the dialog and just downloads the .jar and runs the installer. 
@@ -54,3 +54,4 @@ parts:
       - openjdk-8-jre-headless
       - ibus-gtk3
       - libglib2.0-dev
+      - libglibd-2.0-dev
