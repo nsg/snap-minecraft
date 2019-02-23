@@ -1,5 +1,5 @@
 name: mc-installer
-version: 1.2.5
+version: 1.2.6
 summary: Minecraft Downloader and Installer
 description: |
     A port of the Minecraft-NSG installer snap. Omits the Oracle version of Java and just runs with openjdk. Skips the dialog and just downloads the .jar and runs the installer. 
@@ -25,10 +25,10 @@ parts:
   launcher:
     plugin: dump
     source: scripts
-    after: [desktop-gtk3]
-  desktop-gtk3:
-    stage:
-      - -usr/sbin/update-icon-caches
+    after: [desktop-qt5]
+  #desktop-gtk3:
+    #stage:
+      #- -usr/sbin/update-icon-caches
   game:
     plugin: nil
     build-packages:
