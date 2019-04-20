@@ -1,5 +1,6 @@
 #!/bin/bash
 
+
 export LIBGL_DRIVERS_PATH=$SNAP/usr/lib/x86_64-linux-gnu/dri
 export JAVA_HOME=$SNAP/usr/lib/jvm/java-8-openjdk-amd64/
 export PATH="$JAVA_HOME/bin/:$PATH"
@@ -13,6 +14,14 @@ set -e
 	$SNAP/download-launcher.py
 )
 
-java \
-	-Duser.home=$HOME/appdata \
-	-jar $SNAP_USER_DATA/Minecraft.jar
+#java \
+	#-Duser.home=$HOME/appdata \
+	#-jar $SNAP_USER_DATA/Minecraft.jar
+	
+# Adding method to use new launcher
+set -e
+(
+	cd $SNAP_USER_DATA
+	cd $SNAP/minecraft-launcher
+	./minecraft-launcher
+)
