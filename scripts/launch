@@ -21,7 +21,5 @@ set -e
 # Adding method to use new launcher
 set -e
 (
-	cd $SNAP_USER_DATA
-	cd $SNAP/minecraft-launcher
-	./minecraft-launcher
+	$SNAP_USER_DATA/minecraft-launcher/./minecraft-launcher
 )
