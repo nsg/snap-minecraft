@@ -53,4 +53,4 @@ parts:
       - libxss1
       - libgconf2-4
       - libasound2
-      - libcurl4
+      - libcurl
