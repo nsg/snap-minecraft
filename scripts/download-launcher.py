@@ -8,7 +8,7 @@ import re
 
 
 def main():
-    urlretrieve("https://launcher.mojang.com/download/linux/x86_64/minecraft-launcher_2.1.2482.tar.gz", "minecraft-launcher.tar.gz")
+    urlretrieve("https://launcher.mojang.com/download/Minecraft.tar.gz", "minecraft-launcher.tar.gz")
     
     subprocess.call(['tar','-xzf','minecraft-launcher.tar.gz'])
     
