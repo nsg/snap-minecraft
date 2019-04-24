@@ -12,5 +12,7 @@ def main():
     
     subprocess.call(['tar','-xzf','minecraft-launcher.tar.gz'])
     
+    subprocess.call(['rm','-rf','minecraft-launcher.tar.gz'])
+    
 main()
 
