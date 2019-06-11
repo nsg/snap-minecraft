@@ -1,5 +1,5 @@
 name: mc-installer
-version: 3.0
+version: 3.1
 summary: Minecraft Downloader and Installer
 description: |
     Minecraft installer for Linux distributions. Downloads and installs Minecraft and keeps your version up-to-date.  
