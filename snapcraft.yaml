@@ -2,7 +2,7 @@ name: mc-installer
 version: 4.1.1
 summary: A simple installer for Minecraft: Java Edition
 description: |
-  A simple installer for Minecraft: Java Edition. It downloads the Minecraft "Java Edition" so you can play on your favorite Linux distro. 
+  A simple installer for Minecraft: Java Edition. 
     
 grade: stable
 confinement: strict
