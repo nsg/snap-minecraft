@@ -1,8 +1,8 @@
 name: mc-installer
 version: 4.1.1
 summary: A simple installer for Minecraft: Java Edition
-description: |
-  A simple installer for Minecraft: Java Edition. 
+description: | 
+  A simple installer for Minecraft: Java Edition. You must have an internet connection to use this snap!
     
 grade: stable
 confinement: strict
