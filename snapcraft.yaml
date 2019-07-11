@@ -2,21 +2,11 @@ name: mc-installer
 version: 4.1.1
 summary: A simple installer for Minecraft: Java Edition
 description: |
-    A simple installer for Minecraft: Java Edition.
-
-    This application downloads the "Minecraft: Java Edition" Launcher and runs it so you can easily play Minecraft on your favorite Linux Distribution.
-
-    The Launcher is downloaded every time the applications starts, so you need an internet connection to run the application.
-
+    A simple installer for Minecraft: Java Edition. This application downloads the "Minecraft: Java Edition" Launcher
+    and runs it so you can easily play Minecraft on your favorite Linux Distribution. The Launcher is downloaded 
+    every time the applications starts, so you need an internet connection to run the application.
     **By installing this snap, you agree to download and install the Minecraft: Java Edition files required to run the game.**
 
-    Enjoy!
-
-
-    CREDITS:
-
-    * nsg for the original code that inspired this snap.
-    * Michael Holley for the new icon and logo.
 grade: stable
 confinement: strict
 
