@@ -14,11 +14,6 @@ set -e
 	$SNAP/download-launcher.py
 )
 
-#java \
-	#-Duser.home=$HOME/appdata \
-	#-jar $SNAP_USER_DATA/Minecraft.jar
-	
-# Adding method to use new launcher
 set -e
 (
 	$SNAP_USER_DATA/minecraft-launcher/./minecraft-launcher

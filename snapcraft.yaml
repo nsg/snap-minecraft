@@ -27,7 +27,7 @@ parts:
   launcher:
     plugin: dump
     source: scripts
-    after: [desktop-qt5]
+    after: [desktop-gtk3]
 
   game:
     plugin: nil
@@ -50,6 +50,7 @@ parts:
       - python3-gi
       - python3-gi-cairo
       - python3-cairo
+      - python3-requests
       - gir1.2-gtk-3.0
       - openjdk-8-jre-headless
       - libxss1
