@@ -12,79 +12,53 @@ confinement: strict
 
 apps:
   mc-installer:
-    command: desktop-launch $SNAP/launch
+    extensions:
+      - gnome-3-28
+    command: launch
     plugs:
-      - x11
       - network
-      - unity7
       - opengl
-      - pulseaudio
-      - wayland
-      - desktop
-      - desktop-legacy
+      - audio-playback
+      - pulseaudio  # compatibility with snapd <2.41
       - browser-support
       - home
     environment:
       PYTHONPATH: $SNAP/gnome-platform/usr/lib/python3/dist-packages
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64/
 
 parts:
   launcher:
     plugin: dump
     source: scripts
-    after: [desktop-gnome-platform]
 
   game:
     plugin: nil
-    # Fix for "package contains external symlinks" issue
-    # https://forum.snapcraft.io/t/resolve-package-contains-external-symlinks-error-when-trying-to-snap/2963
     build-packages:
+      - openjdk-8-jre-headless        
+      # Fix for "package contains external symlinks" issue
+      # https://forum.snapcraft.io/t/resolve-package-contains-external-symlinks-error-when-trying-to-snap/2963
       - ca-certificates
       - ca-certificates-java
-      - openjdk-8-jre-headless        
     stage-packages:
-      - libgl1-mesa-dri
+      - libglu1-mesa
       - libswt-gtk-3-java
-      - x11-xserver-utils
       - python3-requests
       - openjdk-8-jre-headless
       - libxss1
       - libgconf2-4
       - libcurl3
-
-  # This part installs the `desktop-launch` script which initialises desktop
-  # features such as fonts, themes and the XDG environment.
-  #
-  # It is copied straight from the snapcraft desktop helpers project. Please
-  # periodically check the source for updates and copy the changes.
-  #    https://github.com/ubuntu/snapcraft-desktop-helpers/blob/master/snapcraft.yaml
-  #
-  desktop-gnome-platform:
-    source: https://github.com/ubuntu/snapcraft-desktop-helpers.git
-    source-subdir: gtk
-    plugin: make
-    make-parameters: ["FLAVOR=gtk3"]
-    build-packages:
-      - gcc
-    override-build: |
-      snapcraftctl build
-      mkdir -pv $SNAPCRAFT_PART_INSTALL/gnome-platform
-
-plugs:
-  # GTK libraries
-  gnome-3-28-1804:
-    interface: content
-    target: $SNAP/gnome-platform
-    default-provider: gnome-3-28-1804
-  # Common GTK themes
-  gtk-3-themes:
-    interface: content
-    target: $SNAP/data-dir/themes
-    default-provider: gtk-common-themes
-  icon-themes:
-    interface: content
-    target: $SNAP/data-dir/icons
-    default-provider: gtk-common-themes
-  sound-themes:
-    interface: content
-    target: $SNAP/data-dir/sounds
-    default-provider: gtk-common-themes
+  
+  # https://snapcraft-utils-library.readthedocs.io/en/latest/lib/cleanup.html
+  cleanup:
+    after:  # Make this part run last; list all your other parts here
+      - game
+      - launcher
+    plugin: nil
+    build-snaps:  # List all content-snaps and base snaps you're using here
+      - core18
+      - gnome-3-28-1804
+    override-prime: |
+      set -eux
+      for snap in "core18" "gnome-3-28-1804"; do  # List all content-snaps and base snaps you're using here
+        cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
+      done
