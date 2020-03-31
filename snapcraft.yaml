@@ -10,6 +10,9 @@ base: core18
 grade: stable
 confinement: strict
 
+architectures:
+  - build-on: amd64
+
 apps:
   mc-installer:
     extensions:
