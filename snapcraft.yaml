@@ -16,7 +16,7 @@ architectures:
 apps:
   mc-installer:
     extensions:
-      - gnome-3-28
+      - gnome-3-34
     command: launch
     plugs:
       - network
