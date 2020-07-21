@@ -1,12 +1,12 @@
 name: mc-installer
 title: Minecraft Installer
-version: '7.0'
+version: '7.1'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
   A simple installer for Minecraft - Java Edition. 
 license: MIT
 
-base: core18
+base: core20
 grade: stable
 confinement: strict
 
