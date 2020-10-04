@@ -14,4 +14,4 @@ Enjoy!
 
 ## SPECIAL THANKS TO:
 
-[galgalesh](https://github.com/galgalesh)
+* [galgalesh](https://github.com/galgalesh)
