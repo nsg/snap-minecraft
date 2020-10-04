@@ -12,4 +12,6 @@ This does not come WITH Minecraft pre-installed. It simply downloads the .jar an
 
 Enjoy!
 
-CREDIT: @nsg for the original code that inspired this snap. 
+## SPECIAL THANKS TO:
+
+[galgalesh](https://github.com/galgalesh)
