@@ -6,7 +6,7 @@ description: |
   A simple installer for Minecraft - Java Edition. 
 license: MIT
 
-base: core
+base: core20
 grade: stable
 confinement: strict
 
