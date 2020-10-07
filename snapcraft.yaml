@@ -1,6 +1,6 @@
 name: mc-installer
 title: Minecraft Installer
-version: '7.1'
+version: '7.2'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
   A simple installer for Minecraft - Java Edition. 
@@ -26,7 +26,7 @@ apps:
       - browser-support
       - home
     environment:
-#      PYTHONPATH: $SNAP/gnome-platform/usr/lib/python3/dist-packages
+      PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.6/site-packages
       JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64/
 
 parts:
