@@ -11,6 +11,5 @@ set -e
 
 set -e
 (
-	cd $SNAP_USER_CURRENT/minecraft-launcher/
-	./minecraft-launcher
+	$SNAP_USER_DATA/minecraft-launcher/./minecraft-launcher
 )
