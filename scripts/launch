@@ -11,5 +11,5 @@ set -e
 
 set -e
 (
-	$SNAP_USER_DATA/minecraft-launcher/./minecraft-launcher
+	$SNAP_COMMON/minecraft-launcher/./minecraft-launcher
 )
