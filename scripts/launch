@@ -11,6 +11,9 @@ set -e
 
 set -e
 (
-	cd $SNAP_USER_DATA/minecraft-launcher/
-	./minecraft-launcher
+#	cd $SNAP_USER_DATA/minecraft-launcher/
+#	./minecraft-launcher
+
+# Attempting to fix
+	$SNAP_USER_DATA/minecraft-launcher/./minecraft-launcher --workDir $SNAP_USER_DATA/.minecraft
 )
