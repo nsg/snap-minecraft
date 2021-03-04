@@ -15,5 +15,5 @@ set -e
 #	./minecraft-launcher
 
 # Attempting to fix
-	$SNAP_USER_DATA/minecraft-launcher/../minecraft-launcher --nativeLauncherVersion=2.2.2012 --workDir $SNAP_USER_DATA/.minecraft
+	$SNAP_USER_DATA/minecraft-launcher/../minecraft-launcher --workDir $SNAP_USER_DATA/.minecraft --nativeLauncherVersion=2.2.2012
 )
