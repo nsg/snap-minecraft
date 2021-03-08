@@ -1,9 +1,9 @@
 name: mc-installer
 title: Minecraft Installer
-version: '8.0'
+version: '8.1'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
-  A simple installer for Minecraft - Java Edition. 
+  A simple installer for Minecraft - Java Edition. Locked to VERSION: 2.2.1262 until Mojang repairs issues for Linux users.
 license: MIT
 
 base: core18
