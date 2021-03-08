@@ -11,7 +11,9 @@ import hashlib
 import os.path
 import subprocess
 
-DOWNLOAD_LINK = "https://launcher.mojang.com/download/Minecraft.tar.gz"
+# QUICK FIX - OLDER LAUNCHER
+DOWNLOAD_LINK = "https://archive.org/download/minecraft-launcher_202103/Minecraft.tar.gz"
+#DOWNLOAD_LINK = "https://launcher.mojang.com/download/Minecraft.tar.gz"
 DOWNLOAD_FILE = "Minecraft.tar.gz"
 RESULT_PATH = "minecraft-launcher"
 
