@@ -11,7 +11,9 @@ import hashlib
 import os.path
 import subprocess
 
-DOWNLOAD_LINK = "https://launcher.mojang.com/download/Minecraft.tar.gz"
+# QUICK FIX - OLDER LAUNCHER
+DOWNLOAD_LINK = "https://archive.org/download/minecraft-launcher_202103/Minecraft.tar.gz"
+#DOWNLOAD_LINK = "https://launcher.mojang.com/download/Minecraft.tar.gz"
 DOWNLOAD_FILE = "Minecraft.tar.gz"
 RESULT_PATH = "minecraft-launcher"
 
@@ -57,7 +59,7 @@ class SnapUIWindow(Gtk.Window):
         self.start_download()
 
     def start_download(self):
-        self.infolabel.set_text("Downloading the latest Minecraft: Java Edition launcher.")
+        self.infolabel.set_text("Downloading Minecraft: Java Edition launcher. (VERSION: 2.2.1262)")
         self.progressbar.set_text(DOWNLOAD_LINK)
         self.progressbar.show()
         self.retry_button.hide()
