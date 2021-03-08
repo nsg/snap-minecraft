@@ -103,7 +103,7 @@ class SnapUIWindow(Gtk.Window):
         subprocess.call(['rm','-f', DOWNLOAD_FILE])
 
         with open('Minecraft-Launcher-Last-Modified', 'w+') as f:
-            f.write(r.headers.get("Last-Modified"))
+            f.write(r.headers.get("Last-Modified", DOWNLOAD_LINK))
 
         Gtk.main_quit()
 
@@ -131,8 +131,8 @@ def requires_update():
     except FileNotFoundError:
         last_modified = "NEVER"
     try:
-        response = requests.head(DOWNLOAD_LINK)
-        if response.headers.get("Last-Modified") != last_modified:
+        response = requests.head(DOWNLOAD_LINK, allow_redirects=True, timeout=10)
+        if response.headers.get("Last-Modified", DOWNLOAD_LINK) != last_modified:
             # New Launcher Available
             return True
         else:
