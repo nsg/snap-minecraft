@@ -6,7 +6,8 @@ description: |
   A simple installer for Minecraft - Java Edition. 
 license: MIT
 
-assumes: command-chain
+assumes: 
+  - command-chain
 base: core18
 grade: stable
 confinement: strict
