@@ -1,11 +1,12 @@
 name: mc-installer
 title: Minecraft Installer
-version: '8.0'
+version: '8.2'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
   A simple installer for Minecraft - Java Edition. 
 license: MIT
 
+assumes: command-chain
 base: core18
 grade: stable
 confinement: strict
@@ -18,6 +19,7 @@ apps:
     extensions:
       - gnome-3-34
     command: launch
+    command-chain: bin/homeishome-launch
     plugs:
       - network
       - opengl
@@ -33,6 +35,11 @@ parts:
   launcher:
     plugin: dump
     source: scripts
+    
+  homeishome-launch:
+    plugin: nil
+    stage-snaps:
+      - homeishome-launch    
 
   game:
     plugin: nil
