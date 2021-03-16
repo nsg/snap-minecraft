@@ -20,7 +20,8 @@ apps:
     extensions:
       - gnome-3-34
     command: launch
-    command-chain: bin/homeishome-launch
+    command-chain: 
+      - bin/homeishome-launch
     plugs:
       - network
       - opengl
