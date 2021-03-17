@@ -1,6 +1,6 @@
 name: mc-installer
 title: Minecraft Installer
-version: '8.2'
+version: '8.3'
 
 summary: A simple installer for Minecraft - Java Edition
 description: | 
@@ -12,6 +12,7 @@ assumes:
 base: core18
 grade: stable
 confinement: strict
+compression: lzo
 
 architectures:
   - build-on: amd64
