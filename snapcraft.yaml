@@ -18,8 +18,8 @@ architectures:
   - build-on: amd64
 
 plugs:
-  - dot-minecraft
-    interface:
+    dot-minecraft:
+    interface: personal-files
     write:
       - $HOME/.minecraft
 
