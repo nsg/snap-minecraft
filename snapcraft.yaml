@@ -21,7 +21,9 @@ plugs:
     dot-minecraft:
     interface: personal-files
     write:
-      - $HOME/.minecraft
+      - $HOME/.minecraft/
+    read:
+      - $HOME/.minecraft/    
 
 apps:
   mc-installer:
