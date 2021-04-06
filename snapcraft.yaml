@@ -18,12 +18,10 @@ architectures:
   - build-on: amd64
 
 plugs:
-    dot-minecraft:
+  dot-minecraft:
     interface: personal-files
     write:
-      - $HOME/.minecraft/
-    read:
-      - $HOME/.minecraft/    
+      - $HOME/.minecraft/ 
 
 apps:
   mc-installer:
