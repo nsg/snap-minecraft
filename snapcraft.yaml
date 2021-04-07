@@ -46,6 +46,11 @@ parts:
   launcher:
     plugin: dump
     source: scripts
+    
+  homeishome-launch:
+    plugin: nil
+    stage-snaps:
+      - homeishome-launch        
 
   game:
     plugin: nil
