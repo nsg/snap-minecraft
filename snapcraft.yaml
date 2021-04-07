@@ -54,7 +54,7 @@ parts:
       - ca-certificates-java
     stage-packages:
       - libglu1-mesa
-      - libswt-gtk-3-java
+      - libswt-gtk-4-java
       - python3-requests
       - openjdk-8-jre-headless
       - libxss1
