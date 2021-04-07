@@ -66,15 +66,16 @@ parts:
       - libxss1
       - libgconf-2-4
       - libcurl4
-  
-  cleanup:
-    after: 
-      - game
-      - launcher
-    plugin: nil
-    build-snaps: 
-      - core20
-      - gnome-3-38-2004
+      
+# Attempting build w/o cleanup to see if that fixes the certificates issue during publish.
+#  cleanup:
+#    after: 
+#      - game
+#      - launcher
+#    plugin: nil
+#    build-snaps: 
+#      - core20
+#      - gnome-3-38-2004
 #    override-prime: |
 #      set -eux
 #      for snap in "core20" "gnome-3-38-2004"; do  # List all content-snaps and base snaps you're using here
