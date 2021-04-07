@@ -68,7 +68,7 @@ parts:
     plugin: nil
     build-snaps: 
       - core20
-      - gnome-3-38
+      - gnome-3-38-2004
     override-prime: |
       set -eux
       for snap in "core20" "gnome-3-38"; do  # List all content-snaps and base snaps you're using here
