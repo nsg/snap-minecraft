@@ -27,7 +27,7 @@ apps:
   mc-installer:
     extensions:
       - gnome-3-38
-    command: bin/launch
+    command: launch
     command-chain: 
       - bin/homeishome-launch    
     plugs:
