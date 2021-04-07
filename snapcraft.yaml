@@ -58,7 +58,7 @@ parts:
       - python3-requests
       - openjdk-8-jre-headless
       - libxss1
-      - libgconf2-4
+      - libgconf-2-4
       - libcurl3
   
   cleanup:
