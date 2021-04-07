@@ -3,7 +3,7 @@ title: Minecraft Installer
 version: '9.1'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
-  A simple installer for Minecraft - Java Edition. Locked to VERSION: 2.2.1262 until Mojang repairs issues for Linux users.
+  A simple installer for Minecraft - Java Edition.
 license: MIT
 
 assumes:
@@ -27,7 +27,7 @@ apps:
   mc-installer:
     extensions:
       - gnome-3-38
-    command: bin/launch
+    command: launch
     command-chain: 
       - bin/homeishome-launch    
     plugs:
@@ -46,20 +46,26 @@ parts:
   launcher:
     plugin: dump
     source: scripts
+    
+  homeishome-launch:
+    plugin: nil
+    stage-snaps:
+      - homeishome-launch        
 
   game:
     plugin: nil
     build-packages:
       - openjdk-8-jre-headless        
       - ca-certificates-java
+      - ca-certificates      
     stage-packages:
       - libglu1-mesa
-      - libswt-gtk-3-java
+      - libswt-gtk-4-java
       - python3-requests
       - openjdk-8-jre-headless
       - libxss1
-      - libgconf2-4
-      - libcurl3
+      - libgconf-2-4
+      - libcurl4
   
   cleanup:
     after: 
@@ -71,6 +77,6 @@ parts:
       - gnome-3-38-2004
     override-prime: |
       set -eux
-      for snap in "core20" "gnome-3-38"; do  # List all content-snaps and base snaps you're using here
+      for snap in "core20" "gnome-3-38-2004"; do  # List all content-snaps and base snaps you're using here
         cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
       done
