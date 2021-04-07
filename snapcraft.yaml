@@ -57,6 +57,7 @@ parts:
     build-packages:
       - openjdk-8-jre-headless        
       - ca-certificates-java
+      - ca-certificates      
     stage-packages:
       - libglu1-mesa
       - libswt-gtk-4-java
