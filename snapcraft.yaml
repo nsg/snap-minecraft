@@ -39,7 +39,7 @@ apps:
       - home
       - dot-minecraft      
     environment:
-      PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.6/site-packages
+      PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.8/site-packages
       JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64/
 
 parts:
@@ -75,8 +75,8 @@ parts:
     build-snaps: 
       - core20
       - gnome-3-38-2004
-    override-prime: |
-      set -eux
-      for snap in "core20" "gnome-3-38-2004"; do  # List all content-snaps and base snaps you're using here
-        cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
-      done
+#    override-prime: |
+#      set -eux
+#      for snap in "core20" "gnome-3-38-2004"; do  # List all content-snaps and base snaps you're using here
+#        cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
+#      done
