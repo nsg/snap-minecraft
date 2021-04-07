@@ -59,7 +59,7 @@ parts:
       - openjdk-8-jre-headless
       - libxss1
       - libgconf-2-4
-      - libcurl3
+      - libcurl4
   
   cleanup:
     after: 
