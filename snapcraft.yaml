@@ -1,15 +1,15 @@
 name: mc-installer
 title: Minecraft Installer
-version: '9.0'
-
+version: '9.1'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
   A simple installer for Minecraft - Java Edition. Locked to VERSION: 2.2.1262 until Mojang repairs issues for Linux users.
 license: MIT
 
-assumes: 
+assumes:
   - command-chain
-base: core18
+  
+base: core20
 grade: stable
 confinement: strict
 compression: lzo
@@ -26,18 +26,18 @@ plugs:
 apps:
   mc-installer:
     extensions:
-      - gnome-3-34
-    command: launch
+      - gnome-3-38
+    command: bin/launch
     command-chain: 
-      - bin/homeishome-launch
+      - bin/homeishome-launch    
     plugs:
       - network
       - opengl
       - audio-playback
-      - pulseaudio  # compatibility with snapd <2.41
+      - pulseaudio
       - browser-support
       - home
-      - dot-minecraft
+      - dot-minecraft      
     environment:
       PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.6/site-packages
       JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64/
@@ -46,19 +46,11 @@ parts:
   launcher:
     plugin: dump
     source: scripts
-    
-  homeishome-launch:
-    plugin: nil
-    stage-snaps:
-      - homeishome-launch    
 
   game:
     plugin: nil
     build-packages:
       - openjdk-8-jre-headless        
-      # Fix for "package contains external symlinks" issue
-      # https://forum.snapcraft.io/t/resolve-package-contains-external-symlinks-error-when-trying-to-snap/2963
-      - ca-certificates
       - ca-certificates-java
     stage-packages:
       - libglu1-mesa
@@ -69,17 +61,16 @@ parts:
       - libgconf2-4
       - libcurl3
   
-  # https://snapcraft-utils-library.readthedocs.io/en/latest/lib/cleanup.html
   cleanup:
-    after:  # Make this part run last; list all your other parts here
+    after: 
       - game
       - launcher
     plugin: nil
-    build-snaps:  # List all content-snaps and base snaps you're using here
-      - core18
-      - gnome-3-28-1804
+    build-snaps: 
+      - core20
+      - gnome-3-38
     override-prime: |
       set -eux
-      for snap in "core18" "gnome-3-28-1804"; do  # List all content-snaps and base snaps you're using here
+      for snap in "core20" "gnome-3-38"; do  # List all content-snaps and base snaps you're using here
         cd "/snap/$snap/current" && find . -type f,l -exec rm -f "$SNAPCRAFT_PRIME/{}" \;
       done
