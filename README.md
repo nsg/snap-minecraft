@@ -8,7 +8,7 @@
 ## About
 A fork of the Minecraft-NSG installer snap. Omits the Oracle version of Java and just runs with openjdk. Skips the dialog and just downloads the .jar and runs the installer.
 
-This does not come WITH Minecraft pre-installed. It simply downloads the `.jar` and allows you to play it on your Linux box. Preferably a superior distribution that is capable of running `snapd`. <==sorry, not sorry.
+This does not come WITH Minecraft pre-installed. It simply downloads the `.jar` and allows you to play it on your Linux box.
 
 Enjoy!
 
