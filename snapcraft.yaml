@@ -40,7 +40,7 @@ apps:
       - dot-minecraft      
     environment:
       PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.8/site-packages
-      JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64/
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-16-openjdk-amd64/
 
 parts:
   launcher:
