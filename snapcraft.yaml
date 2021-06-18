@@ -55,7 +55,7 @@ parts:
   game:
     plugin: nil
     build-packages:
-      - openjdk-8-jre-headless        
+      - openjdk-16-jre-headless        
       - ca-certificates-java
       - ca-certificates      
     stage-packages:
