@@ -1,6 +1,6 @@
 name: mc-installer
 title: Minecraft Installer
-version: '9.1'
+version: '9.3'
 summary: A simple installer for Minecraft - Java Edition
 description: | 
   A simple installer for Minecraft - Java Edition.
@@ -39,8 +39,10 @@ apps:
       - home
       - dot-minecraft      
     environment:
-      PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.6/site-packages
-      JAVA_HOME: $SNAP/usr/lib/jvm/java-8-openjdk-amd64/
+      PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.8/site-packages
+      JAVA_HOME: $SNAP/usr/lib/jvm/java-16-openjdk-amd64/
+      __NV_PRIME_RENDER_OFFLOAD: 1
+      __GLX_VENDOR_LIBRARY_NAME: nvidia      
 
 parts:
   launcher:
@@ -55,18 +57,18 @@ parts:
   game:
     plugin: nil
     build-packages:
-      - openjdk-8-jre-headless        
+      - openjdk-16-jre-headless        
       - ca-certificates-java
       - ca-certificates      
     stage-packages:
       - libglu1-mesa
       - libswt-gtk-4-java
       - python3-requests
-      - openjdk-8-jre-headless
+      - openjdk-16-jre-headless
       - libxss1
       - libgconf-2-4
       - libcurl4
-  
+      
   cleanup:
     after: 
       - game
