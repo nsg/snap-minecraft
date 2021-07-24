@@ -35,7 +35,6 @@ apps:
       - network
       - opengl
       - audio-playback
-      - pulseaudio
       - browser-support
       - home
       - dot-minecraft      
