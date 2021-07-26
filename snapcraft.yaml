@@ -30,7 +30,6 @@ apps:
       - opengl
       - audio-playback
       - browser-support
-      - home
     environment:
       PYTHONPATH: $SNAP_DESKTOP_RUNTIME/usr/lib/python3.8/site-packages
       JAVA_HOME: $SNAP/usr/lib/jvm/java-16-openjdk-amd64/
