@@ -60,7 +60,8 @@ parts:
       - libxss1
       - libgconf-2-4
       - libcurl4
-      
+      - x11-xserver-utils
+
   cleanup:
     after: 
       - game
