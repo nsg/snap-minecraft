@@ -1,12 +1,12 @@
 [Desktop Entry]
 Encoding=UTF-8
 Name=Minecraft
-GenericName=Minecraft Installer
+GenericName=Minecraft-NSG
 Comment=A simple installer for Minecraft - Java Edition
-Exec=mc-installer
+Exec=minecraft-nsg
 Icon=${SNAP}/meta/gui/mcinstaller.png
 Terminal=false
 Type=Application
 StartupNotify=false
 Categories=Application;Game
-Keywords=mc-installer;
+Keywords=minecraft-nsg;
